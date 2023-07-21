@@ -35,29 +35,12 @@
 
         .column-right {
             width: 30%;
-        }
-
-        .column-left .heading,
-        thead {
-            background-color: rgb(167, 167, 167);
-            border: 2px solid black;
-        }
+        }     
 
         .column-right .heading {
             background-color: black;
             border: 2px solid black;
             color: white;
-        }
-
-        .column-left p,
-        .column-right p {
-            margin: 0;
-            font-weight: bold;
-            padding: 5px 0;
-        }
-
-        .customer-info {
-            margin: 20px 0px;
         }
 
         .column-right table {
@@ -75,61 +58,15 @@
             margin-top: 20px;
         }
 
-        .total {
-            text-align: right;
-        }
-
-        .total-col {
-            margin-left: auto;
-        }
-
-        .total-col {
-            width: 30%;
-        }
-
         .section-2 table {
             text-align: center;
         }
 
-        /* Section 3 */
-        .section-3 {
-            margin-top: 20px;
-            display: flex;
+
+        thead th{
+            background-color: yellow;
+            border: 2px solid black;
         }
-
-        .column-left-70 {
-            width: 70%;
-        }
-
-        .column-right-30 {
-            width: 30%;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-        }
-
-
-        .cs-name {
-            width: 50%;
-            text-align: center;
-        }
-
-        .sign {
-            border-top: 2px solid black;
-            width: 70%;
-        }
-
-        .sign p {
-            font-size: 20px;
-
-
-        }
-
-        .thank-you {
-            text-align: right;
-            margin-top: 20px;
-        }
-
         table {
             width: 100%;
             border-collapse: collapse;
@@ -141,6 +78,14 @@
             border: 1px solid #ccc;
             padding: 8px;
         }
+     
+
+        .heading{
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
     </style>
 
 </head>
@@ -148,41 +93,39 @@
 <body>
     <div class="container">
         <!-- Section 1 -->
+        <div class="heading">
+            Cash Memo / Bill
+        </div>
         <section class="section-1">
             <div class="column-left">
-                <div class="heading">
-                    <p>Customer Name #</p>
-                </div>
-                <div class="customer-info">
-                    <p>Local Purchase Committee</p>
-                    <p>ILO. ASAB NUST .</p>
-                    <p>Islamabad</p>
-                </div>
-            </div>
-            <div class="column-right">
-                <div class="heading">
-
-                    <p>Quotation</p>
-                </div>
+           
                 <div class="quotation-info">
                     <table>
                         <tr>
-                            <td>Quote #</td>
-                            <td>SRT-74-02/23</td>
+                            <td>Date</td>
+                            <td>CashMemo</td>
                         </tr>
                         <tr>
-                            <td>Dated #</td>
-                            <td>03 07 2023</td>
+                            <td>15.06.2022</td>
+                            <td>TSR-001-01/22</td>
                         </tr>
                         <tr>
+                            <td>00-01-00</td>
                             <td>NTN #</td>
-                            <td>4187434-0</td>
                         </tr>
-
+                    </table>
+                </div>
+            </div>
+            <div class="column-right">
+                <div class="quotation-info">
+                    <table>
                         <tr>
-                            <td>GBH #</td>
-                            <td>3277876141371</td>
+                            <td>Buyer Name & Address</td>
                         </tr>
+                        <tr>
+                            <td>Usman SB Rawalpindi </td>
+                        </tr>
+                    
                     </table>
                 </div>
             </div>
@@ -194,121 +137,47 @@
                 <thead>
                     <tr>
                         <th>S.no</th>
-                        <th>Qty</th>
                         <th>Description</th>
                         <th>Make</th>
-                        <th>Size</th>
+                        <th>Quantity</th>
+                        <th>Peaking</th>
                         <th>Unit Price</th>
-                        <th>Total Price</th>
+                        <th>Total Prices</th>
+
                     </tr>
                 </thead>
                 <tbody>
                     <!-- Dummy data for the table -->
                     <tr>
                         <td>1</td>
+                        <td>abc</td>
+                        <td>xyz</td>
+                        <td>1</td>
+                        <td>1gm</td>
                         <td>10</td>
-                        <td>Bromine</td>
-                        <td>Sigma/USA</td>
-                        <td>1ML</td>
-                        <td>2500</td>
-                        <td>25,000</td>
+                        <td>10</td>
+
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>Examination Gloves</td>
-                        <td>Malaysia</td>
-                        <td>Box</td>
-                        <td>1250</td>
-                        <td>3,750</td>
-                    </tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
 
+
+                      </tr>
+                    
+               
                 </tbody>
             </table>
-            <div class="total-col ">
-
-                <div class="total">
-                    <table>
-                        <tr>
-                            <td>Total</td>
-                            <td>28,750</td>
-                        </tr>
-                        <tr>
-                            <td>Get 18% </td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td>G Total </td>
-                            <td> </td>
-                        </tr>
-
-                    </table>
-                </div>
-            </div>
+           
         </section>
 
-        <!-- Section 3 -->
-        <section class="section-3">
-            <div class="column-left-70">
-                <table>
-                    <thead>
-                        <tr>
-                            <th colspan="2">Special Notes and Instructions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Delivery Period</td>
-                            <td>4 to 8 weeks</td>
-                        </tr>
-                        <tr>
-                            <td>Quotation Validity</td>
-                            <td>60Days</td>
-                        </tr>
-                        <tr>
-                            <td>Sales Tax</td>
-                            <td>As per Govt Rule</td>
-                        </tr>
-                        <tr>
-                            <td>Email</td>
-                            <td>thebrightsunrise@hotmail.com</td>
-                        </tr>
-                        <tr>
-                            <td>Phone</td>
-                            <td>051-5534444</td>
-                        </tr>
-                        <tr>
-                            <td>Mob/Whatsapp</td>
-                            <td>0092-341-5880649</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="note">
-                    <p>For further questions and comments, please feel free to contact us.</p>
-                    <p>We are willing to consider your ideas that would enrich the RFQ.</p>
-                </div>
+  
 
-
-
-            </div>
-            <div class="column-right-30">
-                <div class="sign">
-                    <p>Signature</p>
-                </div>
-            </div>
-        </section>
-        <div class="cs-name">
-            <table>
-                <tr>
-                    <td>Prepared by:</td>
-                    <td>Muhammad Shahbaz</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="thank-you">
-            <p>Thanks for your business</p>
-        </div>
     </div>
 
 </body>
