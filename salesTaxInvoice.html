@@ -20,14 +20,12 @@
         }
 
         /* Section 1 */
-        .section-1 {
+        .inner-sec {
             display: flex;
             justify-content: space-between;
         }
 
-        .section-1 .heading {
-            text-align: center;
-        }
+
 
         .column-left {
             width: 35%;
@@ -37,27 +35,10 @@
             width: 30%;
         }
 
-        .column-left .heading,
-        thead {
-            background-color: rgb(167, 167, 167);
-            border: 2px solid black;
-        }
-
         .column-right .heading {
             background-color: black;
             border: 2px solid black;
             color: white;
-        }
-
-        .column-left p,
-        .column-right p {
-            margin: 0;
-            font-weight: bold;
-            padding: 5px 0;
-        }
-
-        .customer-info {
-            margin: 20px 0px;
         }
 
         .column-right table {
@@ -75,59 +56,18 @@
             margin-top: 20px;
         }
 
-        .total {
-            text-align: right;
-        }
-
-        .total-col {
-            margin-left: auto;
-        }
-
-        .total-col {
-            width: 30%;
-        }
-
         .section-2 table {
             text-align: center;
         }
 
-        /* Section 3 */
-        .section-3 {
-            margin-top: 20px;
-            display: flex;
-        }
-
-        .column-left-70 {
-            width: 70%;
-        }
-
-        .column-right-30 {
-            width: 30%;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-        }
-
-
-        .cs-name {
-            width: 50%;
-            text-align: center;
-        }
-
-        .sign {
-            border-top: 2px solid black;
-            width: 70%;
-        }
-
-        .sign p {
-            font-size: 20px;
-
-
-        }
-
         .thank-you {
             text-align: right;
-            margin-top: 20px;
+            padding-right: 20px;
+        }
+
+        thead th {
+            background-color: yellow;
+            border: 2px solid black;
         }
 
         table {
@@ -141,6 +81,33 @@
             border: 1px solid #ccc;
             padding: 8px;
         }
+
+
+
+        tfoot tr:nth-last-child(-n+1) td {
+            border: 2px solid black;
+            font-weight: bold;
+
+        }
+
+        .heading {
+            background: yellow;
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+
+        }
+
+        .d-line {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+
+        .column-right.ty {
+            margin-top: auto;
+            font-style: italic;
+        }
     </style>
 
 </head>
@@ -148,41 +115,56 @@
 <body>
     <div class="container">
         <!-- Section 1 -->
-        <section class="section-1">
+        <div class="heading">
+            SALES TAX INVOICE
+        </div>
+        <section class="section-1 inner-sec">
             <div class="column-left">
-                <div class="heading">
-                    <p>Customer Name #</p>
-                </div>
-                <div class="customer-info">
-                    <p>Local Purchase Committee</p>
-                    <p>ILO. ASAB NUST .</p>
-                    <p>Islamabad</p>
-                </div>
-            </div>
-            <div class="column-right">
-                <div class="heading">
 
-                    <p>Quotation</p>
-                </div>
                 <div class="quotation-info">
                     <table>
                         <tr>
-                            <td>Quote #</td>
-                            <td>SRT-74-02/23</td>
+                            <td>Dated</td>
                         </tr>
                         <tr>
-                            <td>Dated #</td>
-                            <td>03 07 2023</td>
+                            <td>Supplier's Name</td>
                         </tr>
                         <tr>
-                            <td>NTN #</td>
-                            <td>4187434-0</td>
+                            <td>The SunRise International & Co</td>
+                        </tr>
+                        <tr>
+                            <td>33, 3rd Floor , Cirose Building , Haider Road Saddar Rawalpindi</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                NTN: 4187434-0
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="column-right">
+                <div class="quotation-info">
+                    <table>
+                        <tr>
+                            <td>Invoice No.</td>
+                            <td>
+                                408
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>Buyer's Name</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                                Dep# Parasitology and Microbiology PMAS AAUR
+                            </td>
+                            <td></td>
                         </tr>
 
-                        <tr>
-                            <td>GBH #</td>
-                            <td>3277876141371</td>
-                        </tr>
                     </table>
                 </div>
             </div>
@@ -193,123 +175,86 @@
             <table>
                 <thead>
                     <tr>
-                        <th>S.no</th>
-                        <th>Qty</th>
+                        <th>Qty.</th>
                         <th>Description</th>
-                        <th>Make</th>
-                        <th>Size</th>
-                        <th>Unit Price</th>
-                        <th>Total Price</th>
+                        <th>Value excl. S.Tax</th>
+                        <th>Total Value excl. S.Tax </th>
+                        <th>GST %</th>
+                        <th>Sales. Tax</th>
+                        <th>G.Total Amount</th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- Dummy data for the table -->
                     <tr>
-                        <td>1</td>
-                        <td>10</td>
-                        <td>Bromine</td>
-                        <td>Sigma/USA</td>
-                        <td>1ML</td>
-                        <td>2500</td>
-                        <td>25,000</td>
+                        <td>5</td>
+                        <td>Apple</td>
+                        <td>200</td>
+                        <td>1,000</td>
+                        <td>18%</td>
+                        <td>180</td>
+                        <td>
+                            1,180
+                        </td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>Examination Gloves</td>
-                        <td>Malaysia</td>
-                        <td>Box</td>
-                        <td>1250</td>
-                        <td>3,750</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+
                     </tr>
+                <tfoot>
+
+                    <tr>
+                        <td></td>
+                        <td>
+                            Total Amount
+                        </td>
+                        <td>1250</td>
+                        <td>6,400,00</td>
+                        <td>GST</td>
+                        <td>
+                            828.00
+                        </td>
+                        <td>
+                            7,228.00
+                        </td>
+                    </tr>
+                </tfoot>
 
                 </tbody>
             </table>
-            <div class="total-col ">
 
-                <div class="total">
-                    <table>
-                        <tr>
-                            <td>Total</td>
-                            <td>28,750</td>
-                        </tr>
-                        <tr>
-                            <td>Get 18% </td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td>G Total </td>
-                            <td> </td>
-                        </tr>
-
-                    </table>
-                </div>
-            </div>
         </section>
+        <section class="section-3 inner-sec">
+            <div class="column-left">
 
-        <!-- Section 3 -->
-        <section class="section-3">
-            <div class="column-left-70">
                 <table>
-                    <thead>
-                        <tr>
-                            <th colspan="2">Special Notes and Instructions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Delivery Period</td>
-                            <td>4 to 8 weeks</td>
-                        </tr>
-                        <tr>
-                            <td>Quotation Validity</td>
-                            <td>60Days</td>
-                        </tr>
-                        <tr>
-                            <td>Sales Tax</td>
-                            <td>As per Govt Rule</td>
-                        </tr>
-                        <tr>
-                            <td>Email</td>
-                            <td>thebrightsunrise@hotmail.com</td>
-                        </tr>
-                        <tr>
-                            <td>Phone</td>
-                            <td>051-5534444</td>
-                        </tr>
-                        <tr>
-                            <td>Mob/Whatsapp</td>
-                            <td>0092-341-5880649</td>
-                        </tr>
-                    </tbody>
+                    <tr>
+                        <td>Sales Tax Rs, ;</td>
+                        <td>828.00</td>
+                    </tr>
+                    <tr>
+                        <td>Net Value Incl Sales Tax Rs, ;</td>
+                        <td class="d-line">7,228.00</td>
+                    </tr>
+
+
                 </table>
-                <div class="note">
-                    <p>For further questions and comments, please feel free to contact us.</p>
-                    <p>We are willing to consider your ideas that would enrich the RFQ.</p>
-                </div>
-
-
-
             </div>
-            <div class="column-right-30">
-                <div class="sign">
-                    <p>Signature</p>
+
+
+            <div class="column-right ty">
+                <div class="thank-you">
+                    <p>Stamp & Signature</p>
                 </div>
             </div>
         </section>
-        <div class="cs-name">
-            <table>
-                <tr>
-                    <td>Prepared by:</td>
-                    <td>Muhammad Shahbaz</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="thank-you">
-            <p>Thanks for your business</p>
-        </div>
     </div>
+
 
 </body>
 
